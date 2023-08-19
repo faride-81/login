@@ -27,8 +27,29 @@ body {
     align-items: center;
 }
 
+.circle1 {
+    width: 300px;
+    height: 300px;
+    border: 40px solid #015be8;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -72px;
+    left: -103px;
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    background-color: #cee7fc;
+    border-radius: 50%;
+    position: absolute;
+    top: -59px;
+    right: 0px;
+}
+
 .flex {
-    height: auto;
+    z-index: 2;
+    height: 80%;
     box-shadow: rgb(222, 252, 254) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 7px 29px 0px;
     display: flex;
     flex-direction: row;
@@ -40,11 +61,13 @@ body {
 }
 
 .flex .img {
+    background-color: white;
+
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 100%;
 }
 
 /* .flex .img .container {
@@ -52,9 +75,9 @@ body {
     margin: 0 auto;
 } */
 .flex .background {
+    height: 100%;
     background-color: rgb(0, 87, 247);
     width: 546px;
-    height: 500px;
 
 }
 
@@ -84,11 +107,13 @@ form .form__input {
 
 form .form__input .form__input__svg {
     position: absolute;
-    top: 12px;
-    left: 13px;
+    top: 5.5px;
+    left: 10px;
 }
 
-form .form__input .form__input__svg svg {}
+form .form__input .form__input__svg svg {
+    color: rgb(75, 132, 240);
+}
 
 form .form__input .form__input__input {
     width: 76%;
@@ -197,6 +222,10 @@ form .btn button:hover {
 
 /* media */
 @media (max-width:1000px) {
+    .flex {
+        height: 90%;
+    }
+
     .flex .background {
         width: 70%;
     }
@@ -204,24 +233,33 @@ form .btn button:hover {
     form label {
         flex-direction: column;
     }
+
     form label .grid {
         width: 70%;
         grid-template-columns: 31% 31% 31%;
         gap: 3%;
         align-items: start;
     }
+
     form label p {
         margin-bottom: 1rem;
     }
-}
 
-@media (max-width:800px) {
-    .flex {
-        box-shadow: none;
+    form .btn {
+      justify-content: start;
     }
+        @media (max-width:700px) {
+        .flex {
+            box-shadow: none;
+        }
 
-    .flex .background {
-        position: absolute;
-        margin: 0 auto;
+        .flex .img {
+            display: none;
+        }
+
+        .flex .background {
+            /* position: absolute; */
+            width: 100%;
+            margin: 0 auto;
+        }
     }
-}
