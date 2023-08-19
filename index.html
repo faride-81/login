@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts/PlusJakartaSans-Medium.ttf">
 </head>
+
 <body>
     <div class="flex">
-        <div class="img"><img src="./img/login_img02.png"></div>
-        <form>
-            <h1>Welcome</h1>
-            <div class="form__input">
-                <div class="form__input__svg"></div>
-                <div class="form__input__input"><input type="text" placeholder="your phone" name="myinput"></div>
-            </div>
-            <div class="form__input">
-                <div class="form__input__svg"></div>
-                <div class="form__input__input"><input type="email" placeholder="your Email" name="myinput"></div>
-            </div>
-            <div class="form__input">
-                <div class="form__input__svg"></div>
-                <div class="form__input__input"><input type="password" placeholder="your password" name="myinput"></div>
-            </div>
-            <label>
-                <p>password strong</p>
-                <div class="level"></div>
-            </label>
-            <div class="btn">
-                <button type="button">Sing in</button>
-                <button type="button">Create account</button>
-            </div>
-        </form>
+        <div class="img">
+            <div class="container"><img src="./img/login_img02.png"></div>
+        </div>
+        <div class="background">
+            <form>
+                <h1>Welcome!</h1>
+                <div class="form__input">
+                    <div class="form__input__svg"></div>
+                    <div class="form__input__input"><input type="text" placeholder="your name" name="myinput"></div>
+                </div>
+                <div class="form__input">
+                    <div class="form__input__svg"></div>
+                    <div class="form__input__input"><input type="email" placeholder="your Email" name="myinput"></div>
+                </div>
+                <div class="form__input">
+                    <div class="form__input__svg"></div>
+                    <div class="form__input__input"><input type="password" placeholder="your password" name="myinput">
+                    </div>
+                </div>
+                <label>
+                    <p>password strong</p>
+                    <div class="grid">
+                        <div class="progress ">
+                            <div class="zard"></div>
+                        </div>
+                        <div class="progress ">
+                            <div class="zard"></div>
+                        </div>
+                        <div class="progress ">
+                            <div></div>
+                        </div>
+                    </div>
+                </label>
+                <div class="btn">
+                    <button type="button">Sing in</button>
+                    <button type="button">Create account</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
