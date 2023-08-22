@@ -1,265 +1,158 @@
-@font-face {
-    font-family: PlusJakartaSans;
-    src: url('./fonts/estedad/ttf/Estedad-Medium.ttf');
-}
-
 * {
-    border: none;
-    padding: 0;
     margin: 0;
-    text-decoration: none;
+    padding: 0;
+    background: unset;
     outline: none;
+    border: none;
+    box-sizing: border-box;
 }
 
-img {
+.container {
+    position: fixed;
     width: 100%;
-}
-
-body {
-    font-family: PlusJakartaSans;
-    background-color: white;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-
-.circle1 {
-    width: 300px;
-    height: 300px;
-    border: 40px solid #015be8;
-    border-radius: 100%;
-    position: absolute;
-    bottom: -72px;
-    left: -103px;
-}
-
-.circle2 {
-    width: 200px;
-    height: 200px;
-    background-color: #cee7fc;
-    border-radius: 50%;
-    position: absolute;
-    top: -59px;
-    right: 0px;
-}
-
-.flex {
-    z-index: 2;
-    height: 80%;
-    box-shadow: rgb(222, 252, 254) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 7px 29px 0px;
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-    margin: 3rem auto;
-    background-color: rgba(255, 255, 255, 0.856);
-    margin: 2rem !important;
-}
-
-.flex .img {
-    background-color: white;
-
-    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 500px;
+    overflow-y: auto;
+    min-width: 300px;
 }
 
-/* .flex .img .container {
-    width: 50%;
-    margin: 0 auto;
-} */
-.flex .background {
-    height: 100%;
+.container h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.container form {
+    width: 90%;
+    height: 90%;
     background-color: rgb(0, 87, 247);
-    width: 546px;
-
+    padding: 0 20px;
 }
 
-.flex .background form {
-    text-align: start;
-    align-items: start;
-    width: 65%;
+.container form .content {
+    display: flex;
+    max-width: 350px;
     margin: 0 auto;
+    height: 100%;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
 }
 
-.flex .background form h1 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-}
-
-form .form__input {
-    position: relative;
+.container form .filds {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 1rem;
-    color: rgb(223, 251, 255);
+    gap: 15px;
+}
+
+.input-box {
+    background-color: white;
+    border-radius: 3rem;
+    position: relative;
+    padding: 8px 0px 8px 30px;
 
 }
 
-form .form__input .form__input__svg {
+.input-box i {
+    color: rgb(205, 225, 236);
     position: absolute;
-    top: 5.5px;
     left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-form .form__input .form__input__svg svg {
-    color: rgb(75, 132, 240);
-}
-
-form .form__input .form__input__input {
-    width: 76%;
-    margin-bottom: 1rem;
-}
-
-form .form__input .form__input__input input {
-    padding: 0.5rem 2rem;
-    border-radius: 1rem;
-    color: rgb(75, 132, 240);
-    font-size: 0.81rem;
+.input-box input {
     width: 100%;
+    height: 100%;
+    color: rgb(0, 87, 247);
 }
 
-form .form__input .form__input__input input:focus {
-    border: rgb(7, 184, 211) 1px solid;
+.filds .btn {
+    /* margin-top: 3rem; */
 }
 
-form label {
+.password-strength {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-}
-
-form label p {
-    font-size: 0.8rem;
+    justify-content: space-between;
+    gap: 10px;
     color: white;
-}
-
-form label .grid {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    gap: 5%;
+    margin-top: 20px;
+    font-size: 11px;
     align-items: center;
+    width: 100%;
 }
-
-form label .grid .progress {
+.password-strength p {
+    color: white;
+    width: 40%;
+}
+.password-strength .grid {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% ;
+    gap: 13%;
+}
+.progress-bar {
     max-width: 50px;
     min-width: 50px;
     height: 5px;
     background-color: #D7D154;
-    border-radius: 40px;
+    border-radius: 0px;
     position: relative;
     overflow: hidden;
 }
-
-form label .grid .progress .zard {
+.progress-bar div {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #0048AE;
     left: -100%;
 }
-
-form .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5%;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-form .btn button {
+button {
+    border: white 2px solid;
+    border-radius: 1rem;
     color: white;
-    border-radius: 3rem;
-    padding: 0.5rem 1rem;
-    background-color: unset;
-    border: white 1px solid;
+    padding: 6px 15px;
+    cursor: pointer;
 }
 
-form .btn button:hover {
-    background-color: rgb(254, 155, 25);
+button.gold {
     border: none;
     color: black;
+    background: linear-gradient(90deg, rgba(255, 194, 0, 1) 16%, rgba(224, 123, 13, 1) 96%);
 }
 
-
-
+/* pleaseholder */
 ::-webkit-input-placeholder {
-    color: rgb(7, 184, 211);
+    /* WebKit, Blink, Edge */
+    color: rgb(0, 87, 247);
 }
 
 :-moz-placeholder {
-    color: rgb(7, 184, 211);
+    /* Mozilla Firefox 4 to 18 */
+    color: rgb(0, 87, 247);
     opacity: 1;
 }
 
 ::-moz-placeholder {
-    color: rgb(7, 184, 211);
+    /* Mozilla Firefox 19+ */
+    color: rgb(0, 87, 247)#909;
     opacity: 1;
 }
 
 :-ms-input-placeholder {
-    color: rgb(7, 184, 211);
+    /* Internet Explorer 10-11 */
+    color: rgb(0, 87, 247);
 }
 
 ::-ms-input-placeholder {
-    color: rgb(7, 184, 211);
+    /* Microsoft Edge */
+    color: rgb(0, 87, 247);
 }
 
 ::placeholder {
-    color: rgb(7, 184, 211);
+    /* Most modern browsers support this now. */
+    color: rgb(0, 87, 247);
 }
-
-
-/* media */
-@media (max-width:1000px) {
-    .flex {
-        height: 90%;
-    }
-
-    .flex .background {
-        width: 70%;
-    }
-
-    form label {
-        flex-direction: column;
-    }
-
-    form label .grid {
-        width: 70%;
-        grid-template-columns: 31% 31% 31%;
-        gap: 3%;
-        align-items: start;
-    }
-
-    form label p {
-        margin-bottom: 1rem;
-    }
-
-    form .btn {
-      justify-content: start;
-    }
-        @media (max-width:700px) {
-        .flex {
-            box-shadow: none;
-        }
-
-        .flex .img {
-            display: none;
-        }
-
-        .flex .background {
-            /* position: absolute; */
-            width: 100%;
-            margin: 0 auto;
-        }
-    }

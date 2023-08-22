@@ -5,57 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./fonts/PlusJakartaSans-Medium.ttf">
+    <link rel="stylesheet" href="./tablet.css" media="(min-width:640px)">
+    <link rel="stylesheet" href="./Desktop.css" media="(min-width:1023px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="circle">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-    </div>
-    <div class="flex">
-        <div class="img">
-            <div class="container"><img src="./img/login_img02.png"></div>
-        </div>
-        <div class="background">
-            <form>
+    <div class="container">
+        <div class="intro"></div>
+        <form action="#">
+            <div class="content">
                 <h1>Welcome!</h1>
-                <div class="form__input">
-                    <div class="form__input__svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg></div>
-                    <div class="form__input__input"><input type="text" placeholder="your name" name="myinput"></div>
-                </div>
-                <div class="form__input">
-                    <div class="form__input__svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></div>
-                    <div class="form__input__input"><input type="email" placeholder="your Email" name="myinput"></div>
-                </div>
-                <div class="form__input">
-                    <div class="form__input__svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg></div>
-                    <div class="form__input__input"><input type="password" placeholder="your password" name="myinput">
+                <div class="filds">
+                    <div class="input-box">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" placeholder="username">
+                    </div>
+                    <div class="input-box">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type="email" placeholder="email">
+                    </div>
+                    <div class="input-box">
+                        <i class='fas fa-lock'></i>
+                        <input type="password" placeholder="password">
+                    </div>
+
+
+                    <div class="password-strength">
+                        <p>password strength</p>
+                        <div class="grid">
+                            <div class="progress-bar">
+                                <div></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="gold">sing in</button>
+                        <button type="submit">login</button>
                     </div>
                 </div>
-                <label>
-                    <p>password strong</p>
-                    <div class="grid">
-                        <div class="progress ">
-                            <div class="zard"></div>
-                        </div>
-                        <div class="progress ">
-                            <div class="zard"></div>
-                        </div>
-                        <div class="progress ">
-                            <div></div>
-                        </div>
-                    </div>
-                </label>
-                <div class="btn">
-                    <button type="button">Sing in</button>
-                    <button type="button">Create account</button>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </body>
 
