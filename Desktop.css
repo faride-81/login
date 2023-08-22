@@ -1,0 +1,14 @@
+.container {
+    background-size: 40%;
+    width: 90%;
+    max-width: 1024px;
+}
+
+.container form {
+    width: 100%;
+
+}
+
+.container .intro {
+    width: 100%;
+}
